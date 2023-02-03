@@ -1,0 +1,23 @@
+--Create a store database 
+
+CREATE TABLE gym_equipment (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT into gym_equipment VALUES (1, "10 pound dumbbells" , 10 , 10 , 4); 
+INSERT into gym_equipment VALUES (2, "25 pound dumbbells" , 10, 12, 4);
+INSERT into gym_equipment VALUES (3, "30 pound dumbbells" , 10, 15, 4);
+INSERT into gym_equipment VALUES (4, "8kg kettlebell" , 4, 25, 10);
+INSERT into gym_equipment VALUES (5, "15kg kettlebell" , 4, 36, 10);
+INSERT into gym_equipment VALUES (6, "25kg kettlebell" , 4, 43, 10);
+INSERT into gym_equipment VALUES (7, "squat bar" , 6, 115, 1);
+INSERT into gym_equipment VALUES (8, "hex bar" , 2, 150, 1);
+INSERT into gym_equipment VALUES (9, "squat rack" , 4 , 250, 15);
+INSERT into gym_equipment VALUES (10, "leg press machine" , 2, 1115, 22);
+INSERT into gym_equipment VALUES (11, "resistance bands" , 50, 5, 2);
+INSERT into gym_equipment VALUES (12, "battle ropes" , 2, 150, 2);
+INSERT into gym_equipment VALUES (13, "jump ropes" , 10, 10, 2);
+INSERT into gym_equipment VALUES (14, "vipr" , 5, 50, 8);
+INSERT into gym_equipment VALUES (15, "clips" , 50, 12, 2);
+
+--display ordered by price if price >=50
+SELECT * FROM gym_equipment WHERE price >=50 ORDER BY price
+

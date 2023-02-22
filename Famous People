@@ -1,0 +1,45 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE movie_stars (id INTEGER         PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT,
+    title TEXT);
+    
+    INSERT INTO movie_stars (first_name, last_name, title)
+    VALUES ("Eva", "Mendes", "The Place Beyond the Pines");
+    INSERT INTO movie_stars (first_name, last_name, title)
+    VALUES ("Jennifer", "Lopez", "Gigli");
+    INSERT INTO movie_stars (first_name, last_name, title)
+    VALUES ("Rachel", "Weisz", "Dream House");
+    
+CREATE TABLE movies (id INTEGER, 
+movie_year INTEGER, 
+title TEXT);
+
+    INSERT INTO movies (id, movie_year, title)
+    VALUES (1, 2012, "The Place Beyond the Pines");
+    INSERT INTO movies (id, movie_year, title)
+    VALUES (2, 2003, "Gigli");
+    INSERT INTO movies (id, movie_year, title)
+    VALUES (3, 2011, "Dream House");
+    
+CREATE TABLE spouses (id INTEGER, name TEXT, title TEXT);
+
+INSERT INTO spouses (id, name, title)
+    VALUES (1, "Ryan Gossling", "The Place Beyond the Pines");
+    INSERT INTO spouses (id, name, title)
+    VALUES (2, "Ben Affleck", "Gigli");
+    INSERT INTO spouses (id, name, title)
+    VALUES (3, "Daniel Craig", "Dream House");
+    
+SELECT * 
+FROM movie_stars
+JOIN spouses
+ON movie_stars.title = spouses.title;
+
+
+
+
+
+
+    
